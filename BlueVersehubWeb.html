@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueVersehub - Ocean Cleanup and Sustainability</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in-out;
+        }
+        button:hover, .nav-link:hover {
+            transform: translateY(-2px);
+            transition: transform 0.2s;
+        }
+        .font-baloo {
+            font-family: 'Baloo 2', cursive;
+        }
+        .page-section {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Landing Page -->
+    <div id="landingPage">
+        <!-- Header with black background -->
+        <header class="bg-black text-white flex justify-between items-center p-4">
+            <div class="flex items-center">
+                <i class="fas fa-water text-2xl text-blue-500"></i> 
+                <span class="ml-2 text-xl font-bold text-blue-600">BlueVersehub</span>
+            </div>
+        </header>
+
+        <main class="relative">
+            <!-- Background Image -->
+            <img alt="People cleaning the beach" class="w-full h-screen object-cover" src="https://t3.ftcdn.net/jpg/01/34/53/74/360_F_134537443_VendrqyXIWyHrZgxdIsfyKUost734JDP.jpg"/>
+            
+            <!-- Text on top of the image -->
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+                <h1 class="text-4xl font-baloo font-bold mb-4 text-white drop-shadow-lg">Discover the Power of Ocean Cleanup</h1>
+                <p class="text-2xl mb-8 drop-shadow-lg">Join the Ocean Cleanup Challenge and make a real impact on our planet's life below water</p>
+                <button class="bg-black text-white py-2 px-6 rounded-full hover:bg-blue-600 transition-colors" onclick="showSection('signInForm')">
+                    Take Action
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Sign-In Form -->
+<div id="signInForm" class="page-section bg-gray-200">
+    <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h2 class="text-2xl font-bold mb-6 text-center text-blue-600">Sign In</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="email" class="block text-gray-700 mb-1">Email</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label for="password" class="block text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                </div>
+                <button type="button" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200" onclick="showSection('dashboard')">
+                    Sign In
+                </button>
+            </form>
+            <p class="mt-6 text-center text-gray-600">
+                Don't have an account? 
+                <a href="#" class="text-orange-500 hover:text-orange-600 font-medium" onclick="showSection('signUpForm')">Sign Up</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+    <!-- Dashboard Content -->
+    <div id="dashboard" class="page-section">
+        <!-- Navbar -->
+        <nav class="bg-black text-white p-4 flex justify-between items-center">
+            <div class="text-blue-500 font-bold text-xl">
+                BlueVersehub
+            </div>
+            <div class="space-x-4">
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('dashboard')">Dashboard</a>
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('schemes')">Schemes & Cleanup</a>
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('contact')">Contact Us</a>
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('landingPage')">Logout</a>
+            </div>
+        </nav>
+
+        <!-- Background Image and Button Section -->
+        <div class="relative h-screen">
+            <img alt="Background image of People cleaning the beach" class="absolute inset-0 w-full h-full object-cover" height="1080" src="https://storage.googleapis.com/a1aa/image/LEi7tQGpwC4Sipdr23t9ts0n1WG_kqyG1NFs4jLlsGs.jpg" width="1920"/>
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+                <h1 class="text-4xl font-bold mb-4">
+                    Welcome to Your Dashboard
+                </h1>
+                <p class="text-lg mb-6">
+                    Connect with a global community, track your impact, and help restore our oceans—one cleanup at a time!
+                </p>
+                <button class="bg-black text-white py-2 px-6 rounded-full mb-4 hover:bg-blue-600" onclick="showSection('schemes')">
+                    Explore Schemes
+                </button>
+            </div>
+        </div>
+
+        <!-- Blue Scheme Info Section -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h2 class="text-blue-600 text-xl font-semibold mb-2">Environmentally Conscious Individuals</h2>
+                    <p class="text-gray-700">Encourage consistent participation in cleanup activities and data reporting with reward points, leaderboards, and eco-friendly incentives.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h2 class="text-blue-600 text-xl font-semibold mb-2">Students & Educators</h2>
+                    <p class="text-gray-700">Integrate ocean conservation into learning with educational modules, VR experiences, and inter-school cleanup competitions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h2 class="text-blue-600 text-xl font-semibold mb-2">Volunteers & Activists</h2>
+                    <p class="text-gray-700">Strengthen community-driven cleanups and plastic hotspot reporting with team-based challenges and social media sharing.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h2 class="text-blue-600 text-xl font-semibold mb-2">Gamers & Tech Enthusiasts</h2>
+                    <p class="text-gray-700">Use VR and gamification to drive awareness with challenges, real-world rewards, and a mobile app for pollution detection.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h2 class="text-blue-600 text-xl font-semibold mb-2">Corporate Social Responsibility (CSR) Teams</h2>
+                    <p class="text-gray-700">Engage businesses in sustainability efforts with sponsored events, CSR leaderboards, and impact reports.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+                    <h2 class="text-blue-600 text-xl font-semibold mb-2">Tourists & Beachgoers</h2>
+                    <p class="text-gray-700">Encourage visitors to report pollution with QR codes at hotspots, rewards for participation, and eco-friendly perks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Schemes & Cleanup Section -->
+    <div id="schemes" class="page-section">
+        <!-- Navbar -->
+        <nav class="bg-black text-white p-4 flex justify-between items-center">
+            <div class="text-blue-500 font-bold text-xl">
+                BlueVersehub
+            </div>
+            <div class="space-x-4">
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('dashboard')">Dashboard</a>
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('schemes')">Schemes & Cleanup</a>
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('contact')">Contact Us</a>
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('landingPage')">Logout</a>
+            </div>
+        </nav>
+
+        <main class="p-8">
+            <h1 class="text-3xl font-bold text-center text-black-700 mb-8">
+                Schemes & Cleanup
+            </h1>
+
+            <!-- Scheme Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Page 1: BlueVersehub Challenge -->
+                <div class="max-w-md w-full bg-white rounded-lg shadow-lg overflow-hidden mx-auto hover-scale">
+                    <img alt="Person cleaning up plastic on a beach with bags of collected plastic waste" class="w-full h-64 object-cover rounded-t-lg" src="https://storage.googleapis.com/a1aa/image/f84DQRMXB6Bi8SOjdaICJJtu17ws-fYdTly4gc8f3rM.jpg"/>
+                    <div class="p-6">
+                        <h1 class="text-2xl font-bold mb-4" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
+                            Combating Plastic Pollution: One Cleanup at a Time
+                        </h1>
+                        <p class="text-gray-700 mb-6">
+                            Plastic pollution is a global crisis, contaminating our oceans, harming marine life, and impacting human health. Through the Ocean Cleanup Challenge, we empower individuals and communities to be part of the solution. Document your cleanup efforts, earn points, and contribute to comprehensive data on plastic hotspots.
+                        </p>
+                        <button class="w-full bg-black text-white py-2 rounded-lg hover:bg-blue-600">
+                            Participate Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Page 2: VR Experience -->
+                <div class="max-w-md w-full bg-white rounded-lg shadow-lg overflow-hidden mx-auto hover-scale">
+                    <img alt="Person wearing VR headset underwater" class="w-full h-64 object-cover rounded-t-lg" src="https://storage.googleapis.com/a1aa/image/wq0Q4JquTfVMWbN8OUliHuMTOzsSRlftGNymRULS0Ik.jpg"/>
+                    <div class="p-6">
+                        <h1 class="text-2xl font-bold mb-4" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
+                            Visualize the Impact: Immerse Yourself in the Ocean Cleanup Experience
+                        </h1>
+                        <p class="text-gray-700 mb-6">
+                            Join the Virtual Reality experience and witness the devastating effects of plastic pollution. Create positive change by understanding the issue deeper.
+                        </p>
+                        <button class="w-full bg-black text-white py-2 rounded-lg hover:bg-blue-600">
+                            Join the VR Experience
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Page 3: BlueVersehub Impact -->
+                <div class="max-w-md w-full bg-white rounded-lg shadow-lg overflow-hidden mx-auto hover-scale">
+                    <img alt="Underwater scene with a cleanup device" class="w-full h-64 object-cover rounded-t-lg" src="https://storage.googleapis.com/a1aa/image/0yNyIp6wFDanpWrVXfpbl3HSf-Rpn2cRhx01A6V5qSs.jpg"/>
+                    <div class="p-6">
+                        <h1 class="text-2xl font-bold mb-4" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
+                            Make a Difference with BlueVersehub
+                        </h1>
+                        <p class="text-gray-700 mb-6">
+                            Explore the latest data on plastic pollution hotspots and help us take targeted action.
+                        </p>
+                        <button class="w-full bg-black text-white py-2 rounded-lg hover:bg-blue-600">
+                            Contribute Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Page 4: Partnerships -->
+                <div class="max-w-md w-full bg-white rounded-lg shadow-lg overflow-hidden mx-auto hover-scale">
+                    <img alt="Collaborating for cleaner oceans" class="w-full h-64 object-cover rounded-t-lg" src="https://storage.googleapis.com/a1aa/image/amHhu1S_fWYcTvks_Amg7VEVDB8IWAuOgDPveUJa9Aw.jpg"/>
+                    <div class="p-6">
+                        <h1 class="text-2xl font-bold mb-4" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
+                            Collaborating for a Cleaner Ocean with BlueVersehub
+                        </h1>
+                        <p class="text-gray-700 mb-6">
+                            We partner with organizations committed to environmental conservation. Together, we amplify our impact to drive real change.
+                        </p>
+                        <button class="w-full bg-black text-white py-2 rounded-lg hover:bg-blue-600">
+                            Explore Partnerships
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="contact" class="page-section">
+        <!-- Navbar -->
+        <nav class="bg-black text-white p-4 flex justify-between items-center">
+            <div class="text-blue-500 font-bold text-xl">
+                BlueVersehub
+            </div>
+            <div class="space-x-4">
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('dashboard')">Dashboard</a>
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('schemes')">Schemes & Cleanup</a>
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('contact')">Contact Us</a>
+                <a class="nav-link hover:text-blue-500" href="#" onclick="showSection('landingPage')">Logout</a>
+            </div>
+        </nav>
+
+        <div class="flex justify-center items-center min-h-screen">
+            <div class="w-full max-w-lg p-8 border border-gray-200 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Contact Us</h2>
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-blue-600 font-semibold mb-2" for="name">Name:</label>
+                        <input class="w-full px-3 py-2 border border-gray-300 rounded" type="text" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-blue-600 font-semibold mb-2" for="email">Email:</label>
+                        <input class="w-full px-3 py-2 border border-gray-300 rounded" type="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-blue-600 font-semibold mb-2" for="message">Message:</label>
+                        <textarea class="w-full px-3 py-2 border border-gray-300 rounded" id="message" rows="4" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white text-center py-4">
+            <p>© 2025 BlueVersehub. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Show landing page by default
+        document.getElementById('landingPage').style.display = 'block';
+        
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.page-section, #landingPage').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show the selected section
+            if (sectionId === 'landingPage') {
+                document.getElementById('landingPage').style.display = 'block';
+            } else {
+                document.getElementById(sectionId).style.display = 'block';
+            }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
